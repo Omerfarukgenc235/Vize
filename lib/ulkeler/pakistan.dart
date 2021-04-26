@@ -33,7 +33,7 @@ class _PakistanState extends State<Pakistan> {
         icon:  Icon(Icons.hotel),
         backgroundColor: Colors.pink,
       ),
-      backgroundColor: Color.fromARGB(255, 20, 31, 88),
+      backgroundColor: Color.fromARGB(255, 0, 0, 20),
       body: SingleChildScrollView(
         child: Container(
           child: Container(
@@ -69,7 +69,7 @@ class _PakistanState extends State<Pakistan> {
                           fit: BoxFit.cover,
                         ),
                         borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                        color: Colors.redAccent,
+                        color: Color.fromARGB(255, 0, 0, 20),
                       ),
                     ),
                     SizedBox(
@@ -223,6 +223,8 @@ class _PakistanState extends State<Pakistan> {
                         );
                       },
                     ),
+                    Padding(padding: EdgeInsets.all(10)),
+
                   ]),
             ),
           ),

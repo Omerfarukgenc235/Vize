@@ -13,26 +13,32 @@ class Almanya extends StatefulWidget {
 
 class _AlmanyaState extends State<Almanya> {
   String ulke = '';
-  void Gonder()
-  {
+
+  void Gonder() {
     var data2 = [];
     ulke = "Almanya";
     data2.add(ulke);
-    Navigator.push(context, MaterialPageRoute(builder: (context) => Gidilecek(),settings: RouteSettings(arguments: data2,)));
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => Gidilecek(),
+            settings: RouteSettings(
+              arguments: data2,
+            )));
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
           Gonder();
-
         },
-        label:  Text(''),
-        icon:  Icon(Icons.hotel),
+        label: Text(''),
+        icon: Icon(Icons.hotel),
         backgroundColor: Colors.pink,
       ),
-      backgroundColor: Color.fromARGB(255, 20, 31, 88),
+      backgroundColor: Color.fromARGB(255, 0, 0, 20),
       body: SingleChildScrollView(
         child: Container(
           child: Container(
@@ -48,7 +54,6 @@ class _AlmanyaState extends State<Almanya> {
                   Color.fromARGB(255, 0, 0, 20),
                   Color.fromARGB(255, 0, 0, 20),
 
-
                   //   Colors.black,
                 ],
               ),
@@ -57,7 +62,6 @@ class _AlmanyaState extends State<Almanya> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Padding(padding: EdgeInsets.all(5)),
-
                   Container(
                     width: 450.0,
                     height: 250.0,
@@ -67,7 +71,7 @@ class _AlmanyaState extends State<Almanya> {
                         fit: BoxFit.cover,
                       ),
                       borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                      color: Colors.redAccent,
+                      color: Color.fromARGB(255, 0, 0, 20),
                     ),
                   ),
                   SizedBox(
@@ -81,8 +85,7 @@ class _AlmanyaState extends State<Almanya> {
                           SizedBox(
                             width: 5,
                           ),
-
-                        Expanded(
+                          Expanded(
                             flex: 1,
                             child: Container(
                               alignment: Alignment.center,
@@ -91,14 +94,17 @@ class _AlmanyaState extends State<Almanya> {
                               decoration: ShapeDecoration(
                                   color: Colors.grey[900],
                                   shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(16.0))),
+                                      borderRadius:
+                                          BorderRadius.circular(16.0))),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
                                     "Nüfus 83,02 milyon",
                                     style: GoogleFonts.robotoSlab(
-                                        color: Colors.white, fontSize: 19,fontWeight: FontWeight.bold),
+                                        color: Colors.white,
+                                        fontSize: 19,
+                                        fontWeight: FontWeight.bold),
                                     textAlign: TextAlign.center,
                                   ),
                                   Icon(
@@ -121,14 +127,17 @@ class _AlmanyaState extends State<Almanya> {
                               decoration: ShapeDecoration(
                                   color: Colors.red[800],
                                   shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(16.0))),
+                                      borderRadius:
+                                          BorderRadius.circular(16.0))),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
                                     "Başkenti Berlin",
                                     style: GoogleFonts.robotoSlab(
-                                        color: Colors.white, fontSize: 19,fontWeight: FontWeight.bold),
+                                        color: Colors.white,
+                                        fontSize: 19,
+                                        fontWeight: FontWeight.bold),
                                     textAlign: TextAlign.center,
                                   ),
                                   Icon(
@@ -150,16 +159,18 @@ class _AlmanyaState extends State<Almanya> {
                               height: 100.0,
                               decoration: ShapeDecoration(
                                   color: Colors.amber,
-
                                   shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(16.0))),
+                                      borderRadius:
+                                          BorderRadius.circular(16.0))),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
                                     "Para birimi Euro",
                                     style: GoogleFonts.robotoSlab(
-                                        color: Colors.black, fontSize: 19,fontWeight: FontWeight.bold),
+                                        color: Colors.black,
+                                        fontSize: 19,
+                                        fontWeight: FontWeight.bold),
                                     textAlign: TextAlign.center,
                                   ),
                                   Icon(
@@ -187,16 +198,18 @@ class _AlmanyaState extends State<Almanya> {
                       children: [
                         Text(
                           "Almanya",
-                          style: GoogleFonts.robotoSlab(color: Colors.white,fontSize: 50,fontWeight: FontWeight.bold),
+                          style: GoogleFonts.robotoSlab(
+                              color: Colors.white,
+                              fontSize: 50,
+                              fontWeight: FontWeight.bold),
                         ),
                         Flag('de', height: 200, width: 200),
                         Text(
-                          "Almanya Federal Cumhuriyeti 1949’dan beri demokratik, parlamenter bir federal devlettir. 1990’da yeniden birleşen Almanya’da 16 eyalet ve nüfusu 100 binin üzerinde olan 81 kent bulunmaktadır. Almanya Orta Avrupa’da Kuzey Denizi ile Alpler arasında uzanan bir devlettir. Almanya Federal Cumhuriyeti'nin şansölyesi 2005 tarihinden beri Angela Merkel'dir.3,4 milyon nüfusuyla Berlin, Almanya’nın en büyük şehridir. Nüfusu milyonlara ulaşan diğer şehirler Hamburg (1,8 milyon) ve Münih’tir (1,3 milyon). 80 milyonun üzerinde nüfusa sahip Almanya, Rusya’nın ardından Avrupa’nın en fazla nüfusa sahip ikinci ülkesidir. Nüfusun yaklaşık yüzde 7.7’sini göçmenler oluşturmaktadır.",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.robotoSlab(color: Colors.white,fontSize: 22)),
-
-                          Padding(padding: EdgeInsets.all(10)),
-
+                            "Almanya Federal Cumhuriyeti 1949’dan beri demokratik, parlamenter bir federal devlettir. 1990’da yeniden birleşen Almanya’da 16 eyalet ve nüfusu 100 binin üzerinde olan 81 kent bulunmaktadır. Almanya Orta Avrupa’da Kuzey Denizi ile Alpler arasında uzanan bir devlettir. Almanya Federal Cumhuriyeti'nin şansölyesi 2005 tarihinden beri Angela Merkel'dir.3,4 milyon nüfusuyla Berlin, Almanya’nın en büyük şehridir. Nüfusu milyonlara ulaşan diğer şehirler Hamburg (1,8 milyon) ve Münih’tir (1,3 milyon). 80 milyonun üzerinde nüfusa sahip Almanya, Rusya’nın ardından Avrupa’nın en fazla nüfusa sahip ikinci ülkesidir. Nüfusun yaklaşık yüzde 7.7’sini göçmenler oluşturmaktadır.",
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.robotoSlab(
+                                color: Colors.white, fontSize: 22)),
+                        Padding(padding: EdgeInsets.all(10)),
                         Padding(padding: EdgeInsets.all(10)),
                       ],
                     ),
@@ -220,6 +233,8 @@ class _AlmanyaState extends State<Almanya> {
                       );
                     },
                   ),
+                  Padding(padding: EdgeInsets.all(10)),
+
                 ]),
           ),
         ),

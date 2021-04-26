@@ -38,7 +38,7 @@ class _TurkeyState extends State<Turkey> {
         icon: Icon(Icons.hotel),
         backgroundColor: Colors.pink,
       ),
-      backgroundColor: Color.fromARGB(255, 20, 31, 88),
+      backgroundColor: Color.fromARGB(255, 0, 0, 20),
       body: IntrinsicWidth(
         child: SingleChildScrollView(
           child: Container(
@@ -75,7 +75,7 @@ class _TurkeyState extends State<Turkey> {
                             fit: BoxFit.cover,
                           ),
                           borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                          color: Color.fromARGB(255, 0, 0, 90),
+                          color: Color.fromARGB(255, 0, 0, 20),
                         ),
                       ),
                       SizedBox(
