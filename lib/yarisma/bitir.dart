@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vize/menuler.dart';
+import '../menuler/menuler.dart';
 import 'package:vize/myhomepage.dart';
 class Bitir extends StatefulWidget {
   @override

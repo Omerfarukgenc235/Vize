@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vize/menuler.dart';
+import 'package:vize/servisler/dosyalama.dart';
+import 'menuler/menuler.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -7,6 +8,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String hakkinda = "Bu uygulama Dr. Öğretim Üyesi Ahmet Cevahir ÇINAR tarafından yürütülen 3301456 kodlu MOBİL PROGRAMLAMA dersi kapsamında 193301071 numaralı Ömer Faruk Genç tarafından 25 Haziran 2021 günü yapılmıştır.";
+
+  @override
+  void initState() {
+    fileUtils.saveToFile(hakkinda);
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,65 +102,3 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class Settings extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      floatingActionButtonLocation:
-          FloatingActionButtonLocation.miniCenterFloat,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.pop(context);
-        },
-        backgroundColor: Colors.black,
-        child: Icon(Icons.home),
-      ),
-      backgroundColor: Colors.cyan,
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Text(
-          "Hakkında",
-          style: TextStyle(color: Colors.white),
-        ),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-              stops: [0.1, 0.5, 0.7, 0.9],
-              colors: [
-                Colors.black,
-                Colors.black,
-                Colors.black,
-                Colors.yellow[100],
-              ],
-            ),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Image.asset(
-                "resimler/indir.png",
-                width: 300,
-                height: 300,
-              ),
-              Text(
-                "Bu uygulama Dr. Öğretim Üyesi Ahmet Cevahir ÇINAR tarafından yürütülen 3301456 kodlu MOBİL PROGRAMLAMA dersi kapsamında 193301071 numaralı Ömer Faruk Genç tarafından 30 Nisan 2021 günü yapılmıştır.",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: Colors.yellow,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold),
-              ),
-              Padding(padding: EdgeInsets.all(40)),
-              Padding(padding: EdgeInsets.all(10)),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}

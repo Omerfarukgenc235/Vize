@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flag/flag.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vize/main.dart';
-import 'package:vize/menuler.dart';
+import '../menuler/menuler.dart';
 import 'package:vize/otel/gidilen.dart';
 
 class Kore extends StatefulWidget {
